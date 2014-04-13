@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link href='http://fonts.googleapis.com/css?family=Finger+Paint|Vibur|Chewy|Sacramento' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="css/contentcss.css">
+
+
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    	<script>
+		function init(){
+		//alert('works');
+		var myLocation = new google.maps.LatLng(41.898284,-87.622836);
+
+		var mapOptions = {
+		center: myLocation,
+		zoom: 18,
+		mapTypeId: google.maps.MapTypeId.SATELLITE,
+		mapTypeControl: true,
+		streetViewControl: true,
+		zoomControl: true
+		};
+
+		var lovelyshoesmap = new google.maps.Map(document.getElementById("lovelyshoesmap"), mapOptions);
+
+		var markerOptions = {
+        position: myLocation,
+        map: lovelyshoesmap,
+        icon: "wearehere.png",
+        animation: google.maps.Animation.DROP,
+        title: "Lovely shoes"
+    	};
+
+		var marker = new google.maps.Marker(markerOptions);
+
+		}
+
+		window.onload = init;
+    	</script>
+
+
+
+</head>
+
+<body>
+
+	<!--Title of the webpage-->
+
+	<h1>Lovely Shoes</h1>
+
+	<!--navigation bar-->
+	<nav id="nav">
+			<button id="buttonnav"><a href="main.html">Home</a></button>
+			<button id="buttonnav"><a href="content.html">Collection</a></button>
+			<button id="buttonnav"><a href="contact.html">Contact</a></button>
+	</nav>
+	<br>
+
+<!--Main container-->
+
+	<div id="maincontainer">
+
+		<!--Contact form-->
+		<br>
+		<div id="form">
+
+		<label id="formtitle">Keep in contact with us...</label>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+    			<label for="Name" class="col-sm-2 control-label">Name</label>
+    			<div class="col-sm-10">
+      				<input type="text" id="form-control" id="name" placeholder="Name">
+    			</div>
+  			</div>
+  			<div class="form-group">
+    			<label for="email" class="form-control">Email</label>
+    			<div class="col-sm-10">
+      				<input type="email" id="form-control" id="inputEmail3" placeholder="Email">
+    			</div>
+  			</div>
+  			<div class="form-group">
+    			<label for="phone" class="col-sm-2 control-label">Phone</label>
+    			<div class="col-sm-10">
+      				<input type="text" id="form-control" id="inputEmail3" placeholder="1-XXX-XXX-XXXX">
+    			</div>
+  			</div>
+  			<div class="form-group">
+    			<label for="message" class="col-sm-2 control-label">Do you want to send us a message?</label>
+    			<div class="col-sm-10">
+      				<textarea id="form-control"></textarea>
+    			</div>
+  			</div>
+
+			<div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+      			<div id="checkbox">
+        		<label>
+          		<input type="checkbox" id="checkbox"> I want to receive Lovely Shoes' offers and news
+        		</label>
+      			</div>
+    			</div>
+  			</div>
+  			<div class="form-group">
+  				<br>
+    			<div class="button-form">
+      			<button id="buttonform">Send</button>
+      			<br>
+    		</div>
+  			</div>
+		</form>
+		</div>
+
+
+		<div id="contact">	
+		<label id="contactinfo">Where are we?</label>
+		<p>Water Tower Place</p>
+		<p>835 N Michigan Ave, Chicago, IL</p>
+		<p>(312)440-3256</p>
+		<p> lovelyshoes@lovelyshoes.com</p>
+		<br>
+		</div>
+
+
+		<!--Map-->
+		<br>
+		<div id="lovelyshoesmap"></div>
+
+
+	</div>
+	<br>
+
+
+
+	<!--footer-->
+
+	<footer id="nav">
+		<p> Laura Chico Tierno  A20313865 </p>
+
+	</footer>
+
+
+</body>
+
+</html>
